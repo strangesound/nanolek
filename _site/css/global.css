@@ -19,7 +19,7 @@
 }
 
 :root {
-    --LimeDark:#9BECB8;
+    --LimeDark: #9BECB8;
     --Lime: #CFF1DE;
     --Cyan: #A4DDFA;
     --Dark: #202D56;
@@ -28,6 +28,7 @@
     --colorLight: #fff;
     --gutter: min(max(8px, 0.595vw));
     --gutter_x2: min(max(16px, 1.190vw));
+    --mediumHeader: min(max(16px, 3.125vw), 3.125vw)
 }
 
 
@@ -57,7 +58,7 @@ a {
 
 .btn:hover {
     opacity: .9;
-    transition: all .3s;
+    transition: .3s;
 
 }
 
@@ -80,7 +81,8 @@ a {
 
 
 /* Slider */
-.slider-btn {
+.slider-btn-next,
+.slider-btn-prev {
     width: 48px;
     height: 48px;
     border: 2px solid var(--Dark);
@@ -92,7 +94,6 @@ a {
     cursor: pointer;
     transition: all .3s;
     margin-top: 16px;
-
 }
 
 .slider-arrow {
@@ -102,14 +103,25 @@ a {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-
-
 }
 
-.slider-btn:hover {
+.slider-btn-prev>.slider-arrow {
+    transform: rotate(180deg);
+}
+
+.slider-btn-next:hover,
+.slider-btn-prev:hover {
     background-color: var(--Dark);
 }
 
-.slider-btn:hover>.slider-arrow {
+.slider-btn-next:hover>.slider-arrow,
+.slider-btn-prev:hover>.slider-arrow {
     filter: brightness(100);
+}
+
+.swiper-button-disabled{
+    filter: grayscale();
+    /* background-color: rgb(194, 194, 194); */
+    /* cursor: none; */
+    /* filter: brightness(10); */
 }

@@ -8,19 +8,24 @@
 <title>Нанолек</title>
 <link rel="stylesheet" href="/css/index.css"/>
 
-<link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
+<link rel='shortcut icon' type='image/x-icon' href='/favicon.ico'/>
 
-<link rel="icon" href="/favicon.ico" sizes="any"><!-- 32×32 -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<!-- 32×32 -->
 <link rel="icon" href="/icon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png"><!-- 180×180 -->
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<!-- 180×180 -->
 <link rel="manifest" href="/manifest.webmanifest">
 
-
+<link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+/>
 
   </head>
 
   <body>
-  <nav class="navbar">
+    <nav class="navbar">
   <a class="navbar-brand" href="/"></a>
   <ul class="nav__list">
     
@@ -115,10 +120,10 @@
     </div>
 
     <div class="news__btn-container">
-        <button class="slider-btn left">
+        <button class="slider-btn-prev">
             <div class="slider-arrow"></div>
         </button>
-        <button class="slider-btn">
+        <button class="slider-btn-next">
             <div class="slider-arrow"></div>
         </button>
 
@@ -214,60 +219,114 @@
         <h2 class="section__head">Specialty care</h2>
         <h2 class="speciality__header">Препараты для лечения онкологических и орфанных заболеваний</h2>
         <div class="speciality__cards-container">
-            
-                <div class="speciality__card">
-                    <img class="speciality_img" src="../assets/images/orphan_1.png" alt="">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
 
-                    <div class="speciality__text-container">
-                        <h3 class="speciality_name">Брукинза</h2>
-                        <p>Препарат идуронат-2-сульфатазы для ферментозаместительной терапии синдрома Хантера (мукополисахаридоз II типа).</p>
-                    </div>
-                </div>
-            
-                <div class="speciality__card">
-                    <img class="speciality_img" src="../assets/images/orphan_2.png" alt="">
+                    
+                        <div class="swiper-slide speciality__card">
+                            <img class="speciality_img" src="../assets/images/orphan_1.png" alt="">
 
-                    <div class="speciality__text-container">
-                        <h3 class="speciality_name">Ритускара</h2>
-                        <p>Препарат идуронат-2-сульфатазы для ферментозаместительной терапии синдрома Хантера (мукополисахаридоз II типа).</p>
-                    </div>
-                </div>
-            
-                <div class="speciality__card">
-                    <img class="speciality_img" src="../assets/images/orphan_3.png" alt="">
+                            <div class="speciality__text-container">
+                                <h3 class="speciality_name">Брукинза</h2>
+                                <p>Препарат идуронат-2-сульфатазы для ферментозаместительной терапии синдрома Хантера (мукополисахаридоз II типа).</p>
+                            </div>
+                        </div>
+                    
+                        <div class="swiper-slide speciality__card">
+                            <img class="speciality_img" src="../assets/images/orphan_2.png" alt="">
 
-                    <div class="speciality__text-container">
-                        <h3 class="speciality_name">Бевастара</h2>
-                        <p>Препарат идуронат-2-сульфатазы для ферментозаместительной терапии синдрома Хантера (мукополисахаридоз II типа).</p>
-                    </div>
-                </div>
-            
-                <div class="speciality__card">
-                    <img class="speciality_img" src="../assets/images/orphan_1.png" alt="">
+                            <div class="speciality__text-container">
+                                <h3 class="speciality_name">Ритускара</h2>
+                                <p>Препарат идуронат-2-сульфатазы для ферментозаместительной терапии синдрома Хантера (мукополисахаридоз II типа).</p>
+                            </div>
+                        </div>
+                    
+                        <div class="swiper-slide speciality__card">
+                            <img class="speciality_img" src="../assets/images/orphan_3.png" alt="">
 
-                    <div class="speciality__text-container">
-                        <h3 class="speciality_name">Дарзалекс</h2>
-                        <p>Препарат идуронат-2-сульфатазы для ферментозаместительной терапии синдрома Хантера (мукополисахаридоз II типа).</p>
-                    </div>
+                            <div class="speciality__text-container">
+                                <h3 class="speciality_name">Бевастара</h2>
+                                <p>Препарат идуронат-2-сульфатазы для ферментозаместительной терапии синдрома Хантера (мукополисахаридоз II типа).</p>
+                            </div>
+                        </div>
+                    
+                        <div class="swiper-slide speciality__card">
+                            <img class="speciality_img" src="../assets/images/orphan_1.png" alt="">
+
+                            <div class="speciality__text-container">
+                                <h3 class="speciality_name">Дарзалекс</h2>
+                                <p>Препарат идуронат-2-сульфатазы для ферментозаместительной терапии синдрома Хантера (мукополисахаридоз II типа).</p>
+                            </div>
+                        </div>
+                    
+                        <div class="swiper-slide speciality__card">
+                            <img class="speciality_img" src="../assets/images/orphan_2.png" alt="">
+
+                            <div class="speciality__text-container">
+                                <h3 class="speciality_name">Ритускара</h2>
+                                <p>Препарат идуронат-2-сульфатазы для ферментозаместительной терапии синдрома Хантера (мукополисахаридоз II типа).</p>
+                            </div>
+                        </div>
+                    
+                        <div class="swiper-slide speciality__card">
+                            <img class="speciality_img" src="../assets/images/orphan_3.png" alt="">
+
+                            <div class="speciality__text-container">
+                                <h3 class="speciality_name">Бевастара</h2>
+                                <p>Препарат идуронат-2-сульфатазы для ферментозаместительной терапии синдрома Хантера (мукополисахаридоз II типа).</p>
+                            </div>
+                        </div>
+                    
+                        <div class="swiper-slide speciality__card">
+                            <img class="speciality_img" src="../assets/images/orphan_1.png" alt="">
+
+                            <div class="speciality__text-container">
+                                <h3 class="speciality_name">Дарзалекс</h2>
+                                <p>Препарат идуронат-2-сульфатазы для ферментозаместительной терапии синдрома Хантера (мукополисахаридоз II типа).</p>
+                            </div>
+                        </div>
+                    
+
                 </div>
-            
+                
+
+            </div>
+
         </div>
     </div>
     <div class="speciality__btm-container">
         <button class="btn">Препараты</button>
+
         <div class="speciality__btn-container">
-            <button class="slider-btn left">
+            <button id="swiper-spec-prev" class="slider-btn-prev">
                 <div class="slider-arrow"></div>
             </button>
-            <button class="slider-btn">
+            <button id="swiper-spec-next" class="slider-btn-next">
                 <div class="slider-arrow"></div>
             </button>
         </div>
 
     </div>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
 </section>
+
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        
+        navigation: {
+            nextEl: "#swiper-spec-next",
+            prevEl: "#swiper-spec-prev"
+        }
+    });
+</script>
+
+
     </main>
+
   </body>
 
 </html>
