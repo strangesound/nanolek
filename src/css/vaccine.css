@@ -1,8 +1,9 @@
 .vaccine {
-    margin: 0 0.588vw;
+    margin: 0.588vw 0.588vw;
     background-color: var(--Cyan);
     border-radius: 40px;
     padding: 3.529vw 3.529vw 3.529vw 3.529vw;
+
 
 }
 
@@ -24,17 +25,22 @@
     margin-bottom: 3.529vw;
 
 }
+
+
 .vaccine__card{
     display: grid;
-    grid-template-columns: 1fr 1.2fr;
+    grid-template-columns: 1fr 1.4fr;
     align-items: end;
     margin-top: -350px;
 }
 
-.vaccine__card>h3 {
-    font-weight: 400;
-    font-size: 18px;
+.vaccine__name {
+    font-weight: 700;
+    font-size: min(max(16px, 1.339vw));
     line-height: 133%;
+    text-transform: uppercase;
+    margin-bottom: 1.339vw;
+    /* padding-top: 5vw; */
     /* min-height: 170px; */
 }
 
