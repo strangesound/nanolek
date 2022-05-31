@@ -1,0 +1,24 @@
+<nav class="navbar">
+  <a class="navbar-brand" href="#"></a>
+  <ul class="nav__list">
+    {% for item in navbar.items %}
+      <li>
+        <a class="nav-item" href="{{ item.url }}" {{ helpers.getLinkActiveState(item.url, page.url) | safe }}>{{ item.text }}</a>
+      </li>
+    {% endfor %}
+    <li>
+
+      <a class="nav-item" href="#">RU | EN</a>
+    </li>
+
+  </ul>
+
+  {# <a class="nav-item nav-link" href="#">О компании</a>
+    <a class="nav-item nav-link" href="#">R&D</a>
+    <a class="nav-item nav-link" href="#">Вакцины</a>
+    <a class="nav-item nav-link" href="#">Производство</a>
+    <a class="nav-item nav-link" href="#">Завод</a>
+    <a class="nav-item nav-link" href="#">Новости</a>
+    <a class="nav-item nav-link" href="#">Карьера</a>
+    <a class="nav-item nav-link" href="#">Контакты</a> #}
+</nav>

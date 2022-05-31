@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+  <head>
+    {% include "basehead.njk"%}
+
+  </head>
+
+  <body>
+    {% include "partials/navbar.njk"%}
+    {% include "partials/header.njk"%}
+
+    <main tabindex="-1" id="main-content">
+
+      {{content | safe}}
+    </main>
+  </body>
+
+</html>

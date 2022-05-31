@@ -1,0 +1,59 @@
+@font-face {
+    font-family: "Stolzl";
+    font-weight: 400;
+    src: url("../assets/fonts/stolzl_book.woff") format("woff")
+}
+
+
+@font-face {
+    font-family: "Stolzl";
+    font-weight: 500;
+    src: url("../assets/fonts/stolzl_regular.woff") format("woff")
+}
+
+
+@font-face {
+    font-family: "Stolzl";
+    font-weight: 700;
+    src: url("../assets/fonts/stolzl_medium.woff") format("woff")
+}
+
+:root {
+    --colorRed: #D80E22;
+    --colorOrange: #FF5D0C;
+    --colorYellow: #F8D62F;
+    --Dark: #202D56;
+    --Back: #F4F4F6;
+    --colorDark2: #4D4D4D;
+    --colorLight: #fff;
+}
+
+
+body {
+    font-family: Stolzl, Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 1.324vw;
+    color: var(--Dark);
+    background-color: var(--Back);
+}
+
+a {
+    color: inherit;
+}
+
+.btn {
+    background-color: var(--Dark);
+    color: white;
+    padding: 1.324vw 4.044vw;
+    border-radius: 106px;
+    border: none;
+    transition: all .3s;
+    cursor: pointer;
+
+}
+
+.btn:hover {
+    opacity: .9;
+    transition: all .3s;
+
+}
