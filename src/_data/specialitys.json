@@ -1,0 +1,22 @@
+[
+    {
+        "specialityTitle": "Брукинза",
+        "specialityBody": "Препарат идуронат-2-сульфатазы для ферментозаместительной терапии синдрома Хантера (мукополисахаридоз II типа).",
+        "specialityImg": "../assets/images/orphan_1.png"
+    },
+    {
+        "specialityTitle": "Ритускара",
+        "specialityBody": "Препарат идуронат-2-сульфатазы для ферментозаместительной терапии синдрома Хантера (мукополисахаридоз II типа).",
+        "specialityImg": "../assets/images/orphan_2.png"
+    },
+    {
+        "specialityTitle": "Бевастара",
+        "specialityBody": "Препарат идуронат-2-сульфатазы для ферментозаместительной терапии синдрома Хантера (мукополисахаридоз II типа).",
+        "specialityImg": "../assets/images/orphan_3.png"
+    },
+    {
+        "specialityTitle": "Дарзалекс",
+        "specialityBody": "Препарат идуронат-2-сульфатазы для ферментозаместительной терапии синдрома Хантера (мукополисахаридоз II типа).",
+        "specialityImg": "../assets/images/orphan_1.png"
+    }
+]

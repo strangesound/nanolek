@@ -1,0 +1,112 @@
+.vaccine {
+    margin: 0 0.588vw;
+    background-color: var(--Cyan);
+    border-radius: 40px;
+    padding: 3.529vw 3.529vw 3.529vw 3.529vw;
+
+}
+
+.vaccine__container {
+    /* display: grid; */
+    /* grid-template-columns: repeat(4, 1fr); */
+    /* gap: 9vw; */
+
+
+}
+.vaccine__text-container{
+    margin-bottom: 160px;
+}
+.vaccine__head {
+    font-weight: 700;
+    font-size: min(max(16px, 1.324vw));
+    line-height: 110%;
+    text-transform: uppercase;
+    margin-bottom: 3.529vw;
+
+}
+.vaccine__card{
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    align-items: end;
+    margin-top: -350px;
+}
+
+.vaccine__card>h3 {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 133%;
+    /* min-height: 170px; */
+}
+
+.vaccine__date {
+    font-size: 12px;
+    line-height: 117%;
+    color: var(--Gray);
+}
+
+.vaccine__btn-container {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    width: 100%;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.vaccine__slider-btn {
+    width: 48px;
+    height: 48px;
+    border: 2px solid var(--Dark);
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Cyan);
+    cursor: pointer;
+    transition: all .3s;
+    margin-top: 16px;
+
+}
+
+.vaccine__slider-arrow {
+    width: 20px;
+    height: 20px;
+    background-image: url(../assets/images/arrow.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+
+}
+
+.vaccine__slider-btn:hover {
+    background-color: var(--Dark);
+}
+
+.vaccine__slider-btn:hover>.vaccine__slider-arrow {
+    filter: brightness(100);
+}
+
+.left {
+    transform: rotate(180deg);
+}
+
+.vaccine_img {
+    max-width: 100%;
+}
+
+.vaccine__btm-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.vaccine__header {
+    font-weight: 500;
+    font-size: min(max(16px, 5.441vw));
+    line-height: 103%;
+    letter-spacing: -0.04em;
+    width: 50%;
+
+}

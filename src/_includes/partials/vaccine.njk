@@ -1,0 +1,31 @@
+<section class="vaccine">
+    <div class="vaccine__container">
+        <h2 class="section__head">ВАКЦИНЫ</h2>
+        <h2 class="vaccine__header">Создаем производство вакцин по полному циклу</h2>
+
+        {% for vaccine in vaccines %}
+            <div class="vaccine__card">
+                <div class="vaccine__text-container">
+                    <h3>{{vaccine.vaccineTitle}}</h2>
+                    <p>{{vaccine.vaccineBody}}</p>
+                </div>
+                <img class="vaccine_img" src="{{vaccine.vaccineImg}}" alt="">
+                {# <p class="vaccine__date">{{vaccine.vaccineDate}}</p> #}
+            </div>
+        {% endfor %}
+
+    </div>
+    <div class="vaccine__btm-container">
+        <button class="btn">Все вакцины</button>
+        <div class="vaccine__btn-container">
+            <button class="slider-btn left">
+                <div class="slider-arrow"></div>
+            </button>
+            <button class="slider-btn">
+                <div class="slider-arrow"></div>
+            </button>
+        </div>
+
+    </div>
+
+</section>

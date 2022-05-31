@@ -1,0 +1,31 @@
+<section class="speciality">
+    <div class="speciality__container">
+        <h2 class="section__head">Specialty care</h2>
+        <h2 class="speciality__header">Препараты для лечения онкологических и орфанных заболеваний</h2>
+        <div class="speciality__cards-container">
+            {% for speciality in specialitys %}
+                <div class="speciality__card">
+                    <img class="speciality_img" src="{{speciality.specialityImg}}" alt="">
+
+                    <div class="speciality__text-container">
+                        <h3 class="speciality_name">{{speciality.specialityTitle}}</h2>
+                        <p>{{speciality.specialityBody}}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="speciality__btm-container">
+        <button class="btn">Препараты</button>
+        <div class="speciality__btn-container">
+            <button class="slider-btn left">
+                <div class="slider-arrow"></div>
+            </button>
+            <button class="slider-btn">
+                <div class="slider-arrow"></div>
+            </button>
+        </div>
+
+    </div>
+
+</section>

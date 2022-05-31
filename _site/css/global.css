@@ -19,12 +19,12 @@
 }
 
 :root {
-    --colorRed: #D80E22;
-    --colorOrange: #FF5D0C;
-    --colorYellow: #F8D62F;
+    --LimeDark:#9BECB8;
+    --Lime: #CFF1DE;
+    --Cyan: #A4DDFA;
     --Dark: #202D56;
     --Back: #F4F4F6;
-    --Gray: #BFBFC2;;
+    --Gray: #BFBFC2;
     --colorLight: #fff;
 }
 
@@ -49,6 +49,7 @@ a {
     border: none;
     transition: all .3s;
     cursor: pointer;
+    white-space: nowrap;
 
 }
 
@@ -56,4 +57,57 @@ a {
     opacity: .9;
     transition: all .3s;
 
+}
+
+.section__head {
+    font-weight: 700;
+    font-size: min(max(16px, 1.324vw));
+    line-height: 110%;
+    text-transform: uppercase;
+    margin-bottom: 3.529vw;
+
+}
+
+.dark {
+    color: var(--Dark);
+}
+
+.white {
+    color: white;
+}
+
+
+/* Slider */
+.slider-btn {
+    width: 48px;
+    height: 48px;
+    border: 2px solid var(--Dark);
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all .3s;
+    margin-top: 16px;
+
+}
+
+.slider-arrow {
+    width: 20px;
+    height: 20px;
+    background-image: url(../assets/images/arrow.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+
+}
+
+.slider-btn:hover {
+    background-color: var(--Dark);
+}
+
+.slider-btn:hover>.slider-arrow {
+    filter: brightness(100);
 }
