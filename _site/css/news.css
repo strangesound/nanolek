@@ -1,5 +1,5 @@
 .news {
-    margin: 0 0.588vw;
+    margin: 0 var(--gutter);
     background-color: #fff;
     border-radius: 0px 0px 40px 40px;
     padding: 3.529vw 3.529vw 3.529vw 3.529vw;

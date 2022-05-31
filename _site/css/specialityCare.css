@@ -1,5 +1,5 @@
 .speciality {
-    margin: 0 0.588vw;
+    margin: var(--gutter_x2) 0.588vw;
     background-color: var(--Lime);
     border-radius: 40px;
     padding: 3.529vw 3.529vw 3.529vw 3.529vw;

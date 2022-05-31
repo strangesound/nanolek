@@ -1,5 +1,5 @@
 .vaccine {
-    margin: 0.588vw 0.588vw;
+    margin: var(--gutter_x2) var(--gutter) ;
     background-color: var(--Cyan);
     border-radius: 40px;
     padding: 3.529vw 3.529vw 3.529vw 3.529vw;

@@ -26,6 +26,8 @@
     --Back: #F4F4F6;
     --Gray: #BFBFC2;
     --colorLight: #fff;
+    --gutter: min(max(8px, 0.595vw));
+    --gutter_x2: min(max(16px, 1.190vw));
 }
 
 
