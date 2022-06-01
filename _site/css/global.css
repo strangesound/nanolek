@@ -109,6 +109,7 @@ a {
     transform: rotate(180deg);
 }
 
+
 .slider-btn-next:hover,
 .slider-btn-prev:hover {
     background-color: var(--Dark);
@@ -124,4 +125,14 @@ a {
     /* background-color: rgb(194, 194, 194); */
     /* cursor: none; */
     /* filter: brightness(10); */
+}
+
+
+.swiper-button-disabled:hover{
+    background-color: transparent;
+    cursor: auto;
+}
+.swiper-button-disabled:hover >.slider-arrow{
+    filter: none;
+
 }

@@ -3,6 +3,7 @@
     background-color: var(--Cyan);
     border-radius: 40px;
     padding: 3.529vw 3.529vw 3.529vw 3.529vw;
+    position: relative;
 
 
 }
@@ -15,7 +16,7 @@
 
 }
 .vaccine__text-container{
-    margin-bottom: 160px;
+    margin-bottom: 100px;
 }
 .vaccine__head {
     font-weight: 700;
@@ -29,9 +30,9 @@
 
 .vaccine__card{
     display: grid;
-    grid-template-columns: 1fr 1.4fr;
+    grid-template-columns: 1fr 2fr;
     align-items: end;
-    margin-top: -350px;
+    /* margin-top: -350px; */
 }
 
 .vaccine__name {
@@ -59,9 +60,18 @@
     justify-content: flex-end;
 }
 
-
+.swiper-slide img{
+    object-fit: contain !important;
+}
 .vaccine_img {
     max-width: 100%;
+    max-height: 80vh;
+    margin-left: auto;
+    margin-right: auto;
+    /* margin-top: -100px; */
+    object-fit: contain;
+  
+
 }
 
 .vaccine__btm-container {
@@ -77,5 +87,11 @@
     line-height: 103%;
     letter-spacing: -0.04em;
     width: 50%;
+    position: absolute;
 
+}
+
+.vaccineSwiper{
+    margin-top: -70px;
+    margin-bottom: 16px;
 }

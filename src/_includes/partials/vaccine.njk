@@ -2,30 +2,48 @@
     <div class="vaccine__container">
         <h2 class="section__head">ВАКЦИНЫ</h2>
         <h2 class="vaccine__header">Создаем производство вакцин по полному циклу</h2>
+        <div class="swiper vaccineSwiper">
+            <div class="swiper-wrapper">
 
-        {% for vaccine in vaccines %}
-            <div class="vaccine__card">
-                <div class="vaccine__text-container">
-                    <h3 class="vaccine__name" >{{vaccine.vaccineTitle}}</h2>
-                    <p>{{vaccine.vaccineBody}}</p>
-                </div>
-                <img class="vaccine_img" src="{{vaccine.vaccineImg}}" alt="">
-                {# <p class="vaccine__date">{{vaccine.vaccineDate}}</p> #}
+                {% for vaccine in vaccines %}
+                    <div class="swiper-slide vaccine__card">
+                        <div class="vaccine__text-container">
+                            <h3 class="vaccine__name" >{{vaccine.vaccineTitle}}</h2>
+                            <p>{{vaccine.vaccineBody}}</p>
+                        </div>
+                        <img class="vaccine_img" src="{{vaccine.vaccineImg}}" alt="">
+                        {# <p class="vaccine__date">{{vaccine.vaccineDate}}</p> #}
+                    </div>
+                {% endfor %}
             </div>
-        {% endfor %}
-
+        </div>
     </div>
     <div class="vaccine__btm-container">
         <button class="btn">Все вакцины</button>
         <div class="vaccine__btn-container">
-            <button class="slider-btn left">
+            <button id="vaccine-prev" class="slider-btn-prev">
                 <div class="slider-arrow"></div>
             </button>
-            <button class="slider-btn">
+            <button id="vaccine-next" class="slider-btn-next">
                 <div class="slider-arrow"></div>
             </button>
         </div>
 
     </div>
 
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
 </section>
+
+<script>
+
+    var swiper = new Swiper(".vaccineSwiper", {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        grabCursor: true,
+        navigation: {
+            nextEl: "#vaccine-next",
+            prevEl: "#vaccine-prev"
+        }
+    });
+</script>

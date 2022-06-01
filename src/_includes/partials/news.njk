@@ -3,24 +3,41 @@
 <section class="news">
     <h2 class="section__head">Новости</h2>
     <div class="news__container">
-        {% for new in news %}
-            <div class="news__card">
-                <h3>{{new.newsTitle}}</h2>
-                {# <p>{{new.newsBody}}</p> #}
-                <p class="news__date">{{new.newsDate}}</p>
+        <div class="swiper newsSwiper">
+            <div class="swiper-wrapper">
+                {% for new in news %}
+                    <div class="swiper-slide news__card">
+                        <h3>{{new.newsTitle}}</h2>
+                        {# <p>{{new.newsBody}}</p> #}
+                        <p class="news__date">{{new.newsDate}}</p>
+                    </div>
+                {% endfor %}
             </div>
-        {% endfor %}
-
+        </div>
     </div>
 
     <div class="news__btn-container">
-        <button class="slider-btn-prev">
+        <button id="news-prev" class="slider-btn-prev">
             <div class="slider-arrow"></div>
         </button>
-        <button class="slider-btn-next">
+        <button id="news-next" class="slider-btn-next">
             <div class="slider-arrow"></div>
         </button>
 
     </div>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
 </section>
+
+<script>
+
+    var swiper = new Swiper(".newsSwiper", {
+        slidesPerView: 4,
+        spaceBetween: 100,
+        grabCursor: true,
+        navigation: {
+            nextEl: "#news-next",
+            prevEl: "#news-prev"
+        }
+    });
+</script>
