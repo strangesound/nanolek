@@ -1,4 +1,4 @@
-<nav class="navbar">
+<nav id="navbar" class="navbar">
   <a class="navbar-brand" href="/"></a>
   <ul class="nav__list">
     {% for item in navbar.items %}
@@ -22,3 +22,26 @@
     <a class="nav-item nav-link" href="#">Карьера</a>
     <a class="nav-item nav-link" href="#">Контакты</a> #}
 </nav>
+
+<script>
+var offsetHeight = document.getElementById('navbar').offsetHeight;
+console.log(offsetHeight);
+
+  /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
+  var prevScrollpos = window.pageYOffset;
+  window.onscroll = function () {
+    var currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+      document
+        .getElementById("navbar")
+        .style
+        .top = "0";
+    } else {
+      document
+        .getElementById("navbar")
+        .style
+        .top = "-"+offsetHeight+"px";
+    }
+    prevScrollpos = currentScrollPos;
+  }
+</script>

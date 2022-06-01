@@ -22,32 +22,32 @@
   </head>
 
   <body>
-    <nav class="navbar">
+    <nav id="navbar" class="navbar">
   <a class="navbar-brand" href="/"></a>
   <ul class="nav__list">
     
       <li>
-        <a class="nav-item" href="/"  aria-current="page">О компании</a>
+        <a class="nav-item" href="/company" >О компании</a>
       </li>
     
       <li>
-        <a class="nav-item" href="#rd" >R&amp;D</a>
+        <a class="nav-item" href="/#rd" >R&amp;D</a>
       </li>
     
       <li>
-        <a class="nav-item" href="#vaccine" >Вакцины</a>
+        <a class="nav-item" href="/#vaccine" >Вакцины</a>
       </li>
     
       <li>
-        <a class="nav-item" href="#dev" >Производство</a>
+        <a class="nav-item" href="/dev" >Производство</a>
       </li>
     
       <li>
-        <a class="nav-item" href="#factory" >Завод</a>
+        <a class="nav-item" href="/#factory" >Завод</a>
       </li>
     
       <li>
-        <a class="nav-item" href="/news/" >Новости</a>
+        <a class="nav-item" href="/news" >Новости</a>
       </li>
     
       <li>
@@ -67,6 +67,29 @@
 
   
 </nav>
+
+<script>
+var offsetHeight = document.getElementById('navbar').offsetHeight;
+console.log(offsetHeight);
+
+  /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
+  var prevScrollpos = window.pageYOffset;
+  window.onscroll = function () {
+    var currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+      document
+        .getElementById("navbar")
+        .style
+        .top = "0";
+    } else {
+      document
+        .getElementById("navbar")
+        .style
+        .top = "-"+offsetHeight+"px";
+    }
+    prevScrollpos = currentScrollPos;
+  }
+</script>
 
     <main tabindex="-1" id="main-content">
 
@@ -162,7 +185,7 @@
         }
     });
 </script>
-<section class="vaccine">
+<section id="vaccine" class="vaccine">
     <div class="vaccine__container">
         <h2 class="section__head marginleft">ВАКЦИНЫ</h2>
         <h2 class="vaccine__header">Создаем производство вакцин по полному циклу</h2>
@@ -282,7 +305,7 @@
 
     </div>
 </section>
-<section class="factory">
+<section id="factory" class="factory">
     <div class="factory__container">
         <h2 class="section__head white marginleft">ПРОИЗВОДСТВО</h2>
         <h2 class="factory__header white marginleft">Завод в Кировской области — это высокотехнологичное производство полного цикла</h2>
@@ -477,7 +500,7 @@
         }
     });
 </script>
-<section class="r_d">
+<section id="rd" class="r_d">
     <div class="r_d__container">
         <div class="r_d__textAndBtn">
             <h2 class="section__head">r&d</h2>
@@ -529,27 +552,27 @@
         <ul class="footer__list">
             
                 <li>
-                    <a class="footer-item" href="/"  aria-current="page">О компании</a>
+                    <a class="footer-item" href="/company" >О компании</a>
                 </li>
             
                 <li>
-                    <a class="footer-item" href="#rd" >R&amp;D</a>
+                    <a class="footer-item" href="/#rd" >R&amp;D</a>
                 </li>
             
                 <li>
-                    <a class="footer-item" href="#vaccine" >Вакцины</a>
+                    <a class="footer-item" href="/#vaccine" >Вакцины</a>
                 </li>
             
                 <li>
-                    <a class="footer-item" href="#dev" >Производство</a>
+                    <a class="footer-item" href="/dev" >Производство</a>
                 </li>
             
                 <li>
-                    <a class="footer-item" href="#factory" >Завод</a>
+                    <a class="footer-item" href="/#factory" >Завод</a>
                 </li>
             
                 <li>
-                    <a class="footer-item" href="/news/" >Новости</a>
+                    <a class="footer-item" href="/news" >Новости</a>
                 </li>
             
                 <li>

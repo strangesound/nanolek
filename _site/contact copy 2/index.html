@@ -22,7 +22,7 @@
   </head>
 
   <body>
-    <nav id="navbar" class="navbar">
+    <nav class="navbar">
   <a class="navbar-brand" href="/"></a>
   <ul class="nav__list">
     
@@ -39,15 +39,15 @@
       </li>
     
       <li>
-        <a class="nav-item" href="/dev" >Производство</a>
+        <a class="nav-item" href="#dev" >Производство</a>
       </li>
     
       <li>
-        <a class="nav-item" href="/#factory" >Завод</a>
+        <a class="nav-item" href="#factory" >Завод</a>
       </li>
     
       <li>
-        <a class="nav-item" href="/news" >Новости</a>
+        <a class="nav-item" href="/news/" >Новости</a>
       </li>
     
       <li>
@@ -55,7 +55,7 @@
       </li>
     
       <li>
-        <a class="nav-item" href="/contact/"  aria-current="page" data-state="active">Контакты</a>
+        <a class="nav-item" href="/contact/" >Контакты</a>
       </li>
     
     <li>
@@ -67,29 +67,6 @@
 
   
 </nav>
-
-<script>
-var offsetHeight = document.getElementById('navbar').offsetHeight;
-console.log(offsetHeight);
-
-  /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
-  var prevScrollpos = window.pageYOffset;
-  window.onscroll = function () {
-    var currentScrollPos = window.pageYOffset;
-    if (prevScrollpos > currentScrollPos) {
-      document
-        .getElementById("navbar")
-        .style
-        .top = "0";
-    } else {
-      document
-        .getElementById("navbar")
-        .style
-        .top = "-"+offsetHeight+"px";
-    }
-    prevScrollpos = currentScrollPos;
-  }
-</script>
 
     <main tabindex="-1" id="main-content">
 
@@ -124,15 +101,15 @@ console.log(offsetHeight);
                 </li>
             
                 <li>
-                    <a class="footer-item" href="/dev" >Производство</a>
+                    <a class="footer-item" href="#dev" >Производство</a>
                 </li>
             
                 <li>
-                    <a class="footer-item" href="/#factory" >Завод</a>
+                    <a class="footer-item" href="#factory" >Завод</a>
                 </li>
             
                 <li>
-                    <a class="footer-item" href="/news" >Новости</a>
+                    <a class="footer-item" href="/news/" >Новости</a>
                 </li>
             
                 <li>
@@ -140,7 +117,7 @@ console.log(offsetHeight);
                 </li>
             
                 <li>
-                    <a class="footer-item" href="/contact/"  aria-current="page" data-state="active">Контакты</a>
+                    <a class="footer-item" href="/contact/" >Контакты</a>
                 </li>
             
             <li>

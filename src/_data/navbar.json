@@ -2,27 +2,27 @@
     "items": [
       {
         "text": "О компании",
-        "url": "/"
+        "url": "/company"
       },
       {
         "text": "R&D",
-        "url": "#rd"
+        "url": "/#rd"
       },
       {
         "text": "Вакцины",
-        "url": "#vaccine"
+        "url": "/#vaccine"
       },
       {
         "text": "Производство",
-        "url": "#dev"
+        "url": "/dev"
       },
       {
         "text": "Завод",
-        "url": "#factory"
+        "url": "/#factory"
       },
       {
         "text": "Новости",
-        "url": "/news/"
+        "url": "/news"
       },
       {
         "text": "Карьера",

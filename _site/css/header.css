@@ -4,7 +4,7 @@
     background-size: cover;
     /* padding-bottom: 54%; */
     border-radius: 40px 40px 0px 0px;
-    margin: 0 var(--gutter);
+    margin: var(--gutter) 0;
     padding: 9.559vw 0 3.529vw 3.529vw;
 }
 

@@ -30,6 +30,8 @@
     --gutter_x2: min(max(16px, 1.190vw));
     --mediumHeader: min(max(16px, 3.125vw), 3.125vw);
     --borderRadius: min(max(20px, 2.976vw), 40px);
+    scroll-behavior: smooth;
+
 }
 
 
