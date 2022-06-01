@@ -1,8 +1,9 @@
 .vaccine {
-    margin: var(--gutter_x2) var(--gutter) ;
+    margin: var(--gutter_x2) var(--gutter);
     background-color: var(--Cyan);
     border-radius: 40px;
-    padding: 3.529vw 3.529vw 3.529vw 3.529vw;
+    padding: 3.529vw 0;
+    /* padding: 3.529vw 3.529vw 3.529vw 3.529vw; */
     position: relative;
 
 
@@ -15,22 +16,26 @@
 
 
 }
-.vaccine__text-container{
+
+.vaccine__text-container {
     margin-bottom: 100px;
+    padding: 0 3.529vw;
 }
+
 .vaccine__head {
     font-weight: 700;
     font-size: min(max(16px, 1.324vw));
     line-height: 110%;
     text-transform: uppercase;
     margin-bottom: 3.529vw;
+    z-index: 2;
 
 }
 
 
-.vaccine__card{
+.vaccine__card {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 1.3fr;
     align-items: end;
     /* margin-top: -350px; */
 }
@@ -60,9 +65,11 @@
     justify-content: flex-end;
 }
 
-.swiper-slide img{
+
+.swiper-slide img {
     object-fit: contain !important;
 }
+
 .vaccine_img {
     max-width: 100%;
     max-height: 80vh;
@@ -70,7 +77,7 @@
     margin-right: auto;
     /* margin-top: -100px; */
     object-fit: contain;
-  
+
 
 }
 
@@ -79,6 +86,13 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    padding: 0 3.529vw;
+
+}
+
+.section__head {
+    padding-left: 3.529vw;
+
 }
 
 .vaccine__header {
@@ -88,10 +102,14 @@
     letter-spacing: -0.04em;
     width: 50%;
     position: absolute;
+    z-index: 2;
+    padding-left: 3.529vw;
+
 
 }
 
-.vaccineSwiper{
-    margin-top: -70px;
-    margin-bottom: 16px;
+.vaccineSwiper {
+    /* margin-top: -70px;
+    margin-bottom: 16px; */
+    margin: -70px -3.529vw 16px -3.529vw;
 }
