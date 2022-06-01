@@ -28,6 +28,8 @@
     font-size: 18px;
     line-height: 133%;
     min-height: 170px;
+    hyphens: auto;
+
 }
 
 .news__date {

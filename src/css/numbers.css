@@ -15,8 +15,7 @@
     grid-column: 1 / 3;
     grid-row: 1 / 3;
     background-color: white;
-    border-radius: 40px;
-    /* width: 48.235vw;
+    border-radius: var(--borderRadius);    /* width: 48.235vw;
     height: 48.235vw; */
     padding: 3.529vw;
     display: flex;
@@ -30,8 +29,7 @@
 
 .numbers__card{
     background-color: white;
-    border-radius: 40px;
-    display: flex;
+    border-radius: var(--borderRadius);    display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;

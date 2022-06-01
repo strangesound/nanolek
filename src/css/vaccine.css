@@ -1,8 +1,7 @@
 .vaccine {
     margin: var(--gutter_x2) var(--gutter);
     background-color: var(--Cyan);
-    border-radius: 40px;
-    padding: 3.529vw 0;
+    border-radius: var(--borderRadius);    padding: 3.529vw 0;
     /* padding: 3.529vw 3.529vw 3.529vw 3.529vw; */
     position: relative;
 
@@ -90,10 +89,6 @@
 
 }
 
-.marginleft {
-    padding-left: 3.529vw;
-
-}
 
 .vaccine__header {
     font-weight: 500;

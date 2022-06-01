@@ -1,18 +1,18 @@
-.numbers {
+.r_d {
     margin: 0 var(--gutter) 0 var(--gutter);
     /* padding: 0.588vw; */
 
 }
 
-.numbers__container {
+.r_d__container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: 1.176vw;
 }
 
-.numbers__textAndBtn {
-    grid-column: 1 / 3;
+.r_d__textAndBtn {
+    /* grid-column: 1 / 3; */
     grid-row: 1 / 3;
     background-color: white;
     border-radius: var(--borderRadius);    /* width: 48.235vw;
@@ -27,7 +27,7 @@
 
 }
 
-.numbers__card{
+.r_d__card{
     background-color: white;
     border-radius: var(--borderRadius);    display: flex;
     flex-direction: column;
@@ -39,16 +39,16 @@
     /* padding: 100%; */
 
 }
-.numbers__alltxt-container{
+.r_d__alltxt-container{
     margin-left: 2vw;
 
 }
-.numbers__text-container{
+.r_d__text-container{
     display: flex;
     flex-direction: row;
     align-items: flex-end;
 }
-.numbers__number {
+.r_d__number {
     font-weight: 500;
     font-size: min(max(48px, 7.941vw));
     line-height: 80%;
@@ -58,13 +58,13 @@
     /* margin-bottom: 3.529vw; */
 
 }
-.numbers_mln {
+.r_d_mln {
     font-weight: 400;
     font-size: min(max(12px, 2vw));
     line-height: 80%;
     margin-left: 8px;
 }
-.numbers__description {
+.r_d__description {
     font-weight: 400;
     font-size: min(max(12px, 1.5vw));
     line-height: 110%;
@@ -72,7 +72,7 @@
 }
 
 
-.numbers_name {
+.r_d_name {
     font-weight: 500;
     font-size: 18px;
     line-height: 133%;
@@ -80,7 +80,7 @@
     /* min-height: 170px; */
 }
 
-.numbers__date {
+.r_d__date {
     font-size: 12px;
     line-height: 117%;
     color: var(--Gray);
@@ -88,14 +88,14 @@
 
 
 
-.numbers__btm-container {
+.r_d__btm-container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
 
-.numbers__header {
+.r_d__header {
     font-weight: 500;
     font-size: min(max(16px, 3.235vw));
     line-height: 105%;

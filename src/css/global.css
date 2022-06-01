@@ -28,14 +28,15 @@
     --colorLight: #fff;
     --gutter: min(max(8px, 0.595vw));
     --gutter_x2: min(max(16px, 1.190vw));
-    --mediumHeader: min(max(16px, 3.125vw), 3.125vw)
+    --mediumHeader: min(max(16px, 3.125vw), 3.125vw);
+    --borderRadius: min(max(20px, 2.976vw), 40px);
 }
 
 
 body {
     font-family: Stolzl, Arial, Helvetica, sans-serif;
     font-weight: 400;
-    font-size: 1.324vw;
+    font-size: min(max(14px, 1.339vw), 26px);
     color: var(--Dark);
     background-color: var(--Back);
 }
@@ -53,6 +54,12 @@ a {
     transition: all .3s;
     cursor: pointer;
     white-space: nowrap;
+
+}
+
+.btnWhite {
+    background-color: var(--colorLight);
+    color: var(--colorDark);
 
 }
 
@@ -96,6 +103,8 @@ a {
     margin-top: 16px;
 }
 
+
+
 .slider-arrow {
     width: 20px;
     height: 20px;
@@ -120,7 +129,7 @@ a {
     filter: brightness(100);
 }
 
-.swiper-button-disabled{
+.swiper-button-disabled {
     filter: grayscale();
     /* background-color: rgb(194, 194, 194); */
     /* cursor: none; */
@@ -128,11 +137,36 @@ a {
 }
 
 
-.swiper-button-disabled:hover{
+.swiper-button-disabled:hover {
     background-color: transparent;
     cursor: auto;
 }
-.swiper-button-disabled:hover >.slider-arrow{
+
+.swiper-button-disabled:hover>.slider-arrow {
     filter: none;
 
 }
+
+.marginleft {
+    margin-left: 3.529vw;
+
+}
+
+.slider-btn-white{
+    filter: brightness(100);
+
+}
+.slider-btn-white>.slider-arrow{
+    filter: brightness(100);
+
+}
+
+.slider-btn-white:hover>.slider-arrow{
+    filter: brightness(0);
+}
+.swiper-button-disabled .slider-btn-white:hover>.slider-arrow {
+    filter: brightness(100);
+
+}
+
+    

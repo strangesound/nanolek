@@ -282,6 +282,90 @@
 
     </div>
 </section>
+<section class="factory">
+    <div class="factory__container">
+        <h2 class="section__head white marginleft">ПРОИЗВОДСТВО</h2>
+        <h2 class="factory__header white marginleft">Завод в Кировской области — это высокотехнологичное производство полного цикла</h2>
+        <div class="factory__cards-container">
+            <div class="swiper factorySwiper">
+                <div class="swiper-wrapper">
+
+                    
+                        <div class="swiper-slide factory__card">
+                            <img class="factory_img" src="./assets/images/factory/factory_01.jpg" alt="">
+
+                            <div class="factory__text-container">
+                                <h3 class="factory_name"></h2>
+                                <p></p>
+                            </div>
+                        </div>
+                    
+                        <div class="swiper-slide factory__card">
+                            <img class="factory_img" src="./assets/images/factory/factory_02.jpg" alt="">
+
+                            <div class="factory__text-container">
+                                <h3 class="factory_name"></h2>
+                                <p></p>
+                            </div>
+                        </div>
+                    
+                        <div class="swiper-slide factory__card">
+                            <img class="factory_img" src="./assets/images/factory/factory_03.jpg" alt="">
+
+                            <div class="factory__text-container">
+                                <h3 class="factory_name"></h2>
+                                <p></p>
+                            </div>
+                        </div>
+                    
+                        <div class="swiper-slide factory__card">
+                            <img class="factory_img" src="./assets/images/factory/factory_04.jpg" alt="">
+
+                            <div class="factory__text-container">
+                                <h3 class="factory_name"></h2>
+                                <p></p>
+                            </div>
+                        </div>
+                    
+
+                </div>
+                
+
+            </div>
+
+        </div>
+    </div>
+    <div class="factory__btm-container">
+        <button class="btn btnWhite marginleft">Наш завод</button>
+
+        <div class="factory__btn-container">
+            <button id="factory-slider-prev" class="slider-btn-prev slider-btn-white">
+                <div class="slider-arrow"></div>
+            </button>
+            <button id="factory-slider-next" class="slider-btn-next slider-btn-white">
+                <div class="slider-arrow"></div>
+            </button>
+        </div>
+
+    </div>
+    <script src="/slider.js"></script>
+
+</section>
+
+<!-- Initialize Swiper -->
+<script>
+    
+
+    var swiper = new Swiper(".factorySwiper", {
+        slidesPerView: 1.8,
+        spaceBetween: 16,
+        grabCursor: true,
+        navigation: {
+            nextEl: "#factory-slider-next",
+            prevEl: "#factory-slider-prev"
+        }
+    });
+</script>
 <section class="speciality">
     <div class="speciality__container">
         <h2 class="section__head">Specialty care</h2>
@@ -393,10 +477,106 @@
         }
     });
 </script>
+<section class="r_d">
+    <div class="r_d__container">
+        <div class="r_d__textAndBtn">
+            <h2 class="section__head">r&d</h2>
+            <h2 class="r_d__header">Вместе с ведущими научно-исследовательскими институтами разрабатываем новые оригинальные продукты</h2>
+            <button class="btn">Разработки</button>
+
+        </div>
+
+        
+            <div class="r_d__card">
+                <div class="r_d__alltxt-container">
+                    <div class="r_d__text-container">
+                        <p class="r_d__number" ></p>
+                        <p class="r_d_mln"></p>
+                    </div>
+                    <p class="r_d__description">НАНОЛЕК ведет разработку более 20 воспроизведенных и оригинальных продуктов по основным направлениям: Вакцины, Химические и Биотехнологические лекарственные препараты, в том числе для терапии редких (орфанных) заболеваний.</p>
+                </div>
+            </div>
+        
+            <div class="r_d__card">
+                <div class="r_d__alltxt-container">
+                    <div class="r_d__text-container">
+                        <p class="r_d__number" ></p>
+                        <p class="r_d_mln"></p>
+                    </div>
+                    <p class="r_d__description">НАНОЛЕК в настоящее время успешно работает с ведущими научно-исследовательскими институтами и коммерческими организациями по разработке лекарственных препаратов и открыт к взаимодействию, т.к. разработка оригинальных лекарственных средств занимает значимое место в стратегии компании. </p>
+                </div>
+            </div>
+        
+
+    </div>
+</section>
 
 <script src="/slider.js"></script>
 
     </main>
+    <section class="footer">
+    <div class="footer__container">
+        <div class="footer__left-col">
+            <p class="footer__email"><a href='mailto:info@nanolek.ru'>info@nanolek.ru</a></p>
+            <p class="footer__adress">
+                г. Москва
+                Бутырский Вал, 68\70, стр.1
+                Бизнес-центр «Бейкер-плаза»
+                2 этаж, офис 24 
+                </p>
+        </div>
+
+        <ul class="footer__list">
+            
+                <li>
+                    <a class="footer-item" href="/"  aria-current="page">О компании</a>
+                </li>
+            
+                <li>
+                    <a class="footer-item" href="#rd" >R&amp;D</a>
+                </li>
+            
+                <li>
+                    <a class="footer-item" href="#vaccine" >Вакцины</a>
+                </li>
+            
+                <li>
+                    <a class="footer-item" href="#dev" >Производство</a>
+                </li>
+            
+                <li>
+                    <a class="footer-item" href="#factory" >Завод</a>
+                </li>
+            
+                <li>
+                    <a class="footer-item" href="/news/" >Новости</a>
+                </li>
+            
+                <li>
+                    <a class="footer-item" href="/career/" >Карьера</a>
+                </li>
+            
+                <li>
+                    <a class="footer-item" href="/contact/" >Контакты</a>
+                </li>
+            
+            <li>
+
+                <a class="footer-item" href="#">Комплаенс</a>
+            </li>
+
+        </ul>
+        <p>Подписаться <br>на рассылку</p>
+        <div class="footer__bottom">
+            <a href="https://vk.com/nanolek" class="footer__socials"></a>
+            <div class="footer__policy">
+                <p>Политика конфиденциальности</p>
+                <p>© «Нанолек», 2022</p>
+            </div>
+        </div>
+    </div>
+
+</section>
 
   </body>
 

@@ -1,0 +1,57 @@
+<section class="factory">
+    <div class="factory__container">
+        <h2 class="section__head white marginleft">ПРОИЗВОДСТВО</h2>
+        <h2 class="factory__header white marginleft">Завод в Кировской области — это высокотехнологичное производство полного цикла</h2>
+        <div class="factory__cards-container">
+            <div class="swiper factorySwiper">
+                <div class="swiper-wrapper">
+
+                    {% for factory in factorys %}
+                        <div class="swiper-slide factory__card">
+                            <img class="factory_img" src="{{factory.factoryImg}}" alt="">
+
+                            <div class="factory__text-container">
+                                <h3 class="factory_name">{{factory.factoryTitle}}</h2>
+                                <p>{{factory.factoryBody}}</p>
+                            </div>
+                        </div>
+                    {% endfor %}
+
+                </div>
+                {# <div class="swiper-pagination"></div> #}
+
+            </div>
+
+        </div>
+    </div>
+    <div class="factory__btm-container">
+        <button class="btn btnWhite marginleft">Наш завод</button>
+
+        <div class="factory__btn-container">
+            <button id="factory-slider-prev" class="slider-btn-prev slider-btn-white">
+                <div class="slider-arrow"></div>
+            </button>
+            <button id="factory-slider-next" class="slider-btn-next slider-btn-white">
+                <div class="slider-arrow"></div>
+            </button>
+        </div>
+
+    </div>
+    <script src="/slider.js"></script>
+
+</section>
+
+<!-- Initialize Swiper -->
+<script>
+    {# import Swiper, {Navigation, Pagination} from 'swiper'; #}
+
+    var swiper = new Swiper(".factorySwiper", {
+        slidesPerView: 1.8,
+        spaceBetween: 16,
+        grabCursor: true,
+        navigation: {
+            nextEl: "#factory-slider-next",
+            prevEl: "#factory-slider-prev"
+        }
+    });
+</script>

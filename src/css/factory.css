@@ -1,11 +1,12 @@
-.speciality {
+.factory {
     margin: var(--gutter_x2) 0.588vw;
-    background-color: var(--Lime);
-    border-radius: var(--borderRadius);    padding: 3.529vw 3.529vw 3.529vw 3.529vw;
+    background-color: var(--Dark);
+    border-radius: var(--borderRadius);    
+    padding:  3.529vw 0;
 
 }
 
-.speciality__container {
+.factory__container {
     /* display: grid; */
     /* grid-template-columns: repeat(4, 1fr); */
     /* gap: 9vw; */
@@ -13,11 +14,11 @@
 
 }
 
-.speciality__text-container {
+.factory__text-container {
     /* margin-bottom: 160px; */
 }
 
-.speciality__head {
+.factory__head {
     font-weight: 700;
     font-size: min(max(16px, 1.324vw));
     line-height: 110%;
@@ -27,7 +28,7 @@
 }
 
 
-.speciality_name {
+.factory_name {
     font-weight: 500;
     font-size: 18px;
     line-height: 133%;
@@ -35,34 +36,37 @@
     /* min-height: 170px; */
 }
 
-.speciality__date {
+.factory__date {
     font-size: 12px;
     line-height: 117%;
     color: var(--Gray);
 }
 
-.speciality__btn-container {
+.factory__btn-container {
     display: flex;
     flex-direction: row;
     gap: 8px;
     width: 100%;
     align-items: flex-end;
     justify-content: flex-end;
+    margin-right: 3.529vw;
 }
 
 
-.speciality_img {
+.factory_img {
     max-width: 100%;
+    margin-left: 3.529vw;
+    /* margin-right: 3.529vw; */
 }
 
-.speciality__btm-container {
+.factory__btm-container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
 
-.speciality__header {
+.factory__header {
     font-weight: 500;
     font-size: var(--mediumHeader);
     line-height: 103%;
@@ -71,7 +75,7 @@
 
 }
 
-.speciality__cards-container {
+.factory__cards-container {
     display: block;
     margin: 4.836vw 0;
     /* flex-direction: row; */
@@ -82,12 +86,12 @@
 
 }
 
-.speciality__card {
+.factory__card {
     display: flex;
     flex-direction: column;
-    background-color: var(--LimeDark);
-    border-radius: var(--borderRadius);
-    padding: 2.381vw;
+    /* background-color: var(--LimeDark); */
+    border-radius: 10px;
+    /* padding: 2.381vw; */
 }
 
 .swiper {
@@ -96,6 +100,7 @@
 }
 
 .swiper-slide {
+    /* margin: 0; */
     /* margin-bottom: 50px; */
     /* text-align: center; */
     /* font-size: 18px; */

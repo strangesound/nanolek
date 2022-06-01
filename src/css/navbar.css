@@ -33,6 +33,7 @@
     text-decoration: none;
     list-style-type: none;
     transition: opacity .25s;
+    text-transform: uppercase;
 }
 
 .nav-item:hover {
