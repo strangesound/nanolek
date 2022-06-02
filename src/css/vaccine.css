@@ -99,6 +99,7 @@
     position: absolute;
     z-index: 2;
     padding-left: 3.529vw;
+    pointer-events: none;
 
 
 }
