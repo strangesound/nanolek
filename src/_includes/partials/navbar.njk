@@ -1,19 +1,20 @@
 <nav id="navbar" class="navbar">
-  <a class="navbar-brand" href="/"></a>
-  <ul class="nav__list">
-    {% for item in navbar.items %}
+  <div class="nav-padding">
+    <a class="navbar-brand" href="/"></a>
+    <ul class="nav__list">
+      {% for item in navbar.items %}
+        <li>
+          <a class="nav-item" href="{{ item.url }}" {{ helpers.getLinkActiveState(item.url, page.url) | safe }}>{{ item.text }}</a>
+        </li>
+      {% endfor %}
       <li>
-        <a class="nav-item" href="{{ item.url }}" {{ helpers.getLinkActiveState(item.url, page.url) | safe }}>{{ item.text }}</a>
+
+        <a class="nav-item" href="#">RU | EN</a>
       </li>
-    {% endfor %}
-    <li>
 
-      <a class="nav-item" href="#">RU | EN</a>
-    </li>
+    </ul>
 
-  </ul>
-
-  {# <a class="nav-item nav-link" href="#">О компании</a>
+    {# <a class="nav-item nav-link" href="#">О компании</a>
     <a class="nav-item nav-link" href="#">R&D</a>
     <a class="nav-item nav-link" href="#">Вакцины</a>
     <a class="nav-item nav-link" href="#">Производство</a>
@@ -21,27 +22,5 @@
     <a class="nav-item nav-link" href="#">Новости</a>
     <a class="nav-item nav-link" href="#">Карьера</a>
     <a class="nav-item nav-link" href="#">Контакты</a> #}
-</nav>
-
-<script>
-var offsetHeight = document.getElementById('navbar').offsetHeight;
-console.log(offsetHeight);
-
-  /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
-  var prevScrollpos = window.pageYOffset;
-  window.onscroll = function () {
-    var currentScrollPos = window.pageYOffset;
-    if (prevScrollpos > currentScrollPos) {
-      document
-        .getElementById("navbar")
-        .style
-        .top = "0";
-    } else {
-      document
-        .getElementById("navbar")
-        .style
-        .top = "-"+offsetHeight+"px";
-    }
-    prevScrollpos = currentScrollPos;
-  }
-</script>
+  </nav>
+</div>

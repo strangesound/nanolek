@@ -23,73 +23,53 @@
 
   <body>
     <nav id="navbar" class="navbar">
-  <a class="navbar-brand" href="/"></a>
-  <ul class="nav__list">
-    
+  <div class="nav-padding">
+    <a class="navbar-brand" href="/"></a>
+    <ul class="nav__list">
+      
+        <li>
+          <a class="nav-item" href="/company" >О компании</a>
+        </li>
+      
+        <li>
+          <a class="nav-item" href="/#rd" >R&amp;D</a>
+        </li>
+      
+        <li>
+          <a class="nav-item" href="/#vaccine" >Вакцины</a>
+        </li>
+      
+        <li>
+          <a class="nav-item" href="/dev"  data-state="active">Производство</a>
+        </li>
+      
+        <li>
+          <a class="nav-item" href="/#factory" >Завод</a>
+        </li>
+      
+        <li>
+          <a class="nav-item" href="/news" >Новости</a>
+        </li>
+      
+        <li>
+          <a class="nav-item" href="/career/" >Карьера</a>
+        </li>
+      
+        <li>
+          <a class="nav-item" href="/contact/" >Контакты</a>
+        </li>
+      
       <li>
-        <a class="nav-item" href="/company" >О компании</a>
-      </li>
-    
-      <li>
-        <a class="nav-item" href="/#rd" >R&amp;D</a>
-      </li>
-    
-      <li>
-        <a class="nav-item" href="/#vaccine" >Вакцины</a>
-      </li>
-    
-      <li>
-        <a class="nav-item" href="/dev"  data-state="active">Производство</a>
-      </li>
-    
-      <li>
-        <a class="nav-item" href="/#factory" >Завод</a>
-      </li>
-    
-      <li>
-        <a class="nav-item" href="/news" >Новости</a>
-      </li>
-    
-      <li>
-        <a class="nav-item" href="/career/" >Карьера</a>
-      </li>
-    
-      <li>
-        <a class="nav-item" href="/contact/" >Контакты</a>
-      </li>
-    
-    <li>
 
-      <a class="nav-item" href="#">RU | EN</a>
-    </li>
+        <a class="nav-item" href="#">RU | EN</a>
+      </li>
 
-  </ul>
+    </ul>
 
-  
-</nav>
+    
+  </nav>
+</div>
 
-<script>
-var offsetHeight = document.getElementById('navbar').offsetHeight;
-console.log(offsetHeight);
-
-  /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
-  var prevScrollpos = window.pageYOffset;
-  window.onscroll = function () {
-    var currentScrollPos = window.pageYOffset;
-    if (prevScrollpos > currentScrollPos) {
-      document
-        .getElementById("navbar")
-        .style
-        .top = "0";
-    } else {
-      document
-        .getElementById("navbar")
-        .style
-        .top = "-"+offsetHeight+"px";
-    }
-    prevScrollpos = currentScrollPos;
-  }
-</script>
 
     <main tabindex="-1" id="main-content">
 
@@ -100,7 +80,9 @@ console.log(offsetHeight);
     <section class="footer">
     <div class="footer__container">
         <div class="footer__left-col">
-            <p class="footer__email"><a href='mailto:info@nanolek.ru'>info@nanolek.ru</a></p>
+            <p class="footer__email">
+                <a href='mailto:info@nanolek.ru'>info@nanolek.ru</a>
+            </p>
             <p class="footer__adress">
                 г. Москва
                 Бутырский Вал, 68\70, стр.1
@@ -160,6 +142,49 @@ console.log(offsetHeight);
     </div>
 
 </section>
+
+<script>
+
+    const navBar = document.getElementById('navbar');
+    const mainContent = document.getElementById("main-content");
+
+    document.addEventListener('DOMContentLoaded', () => {
+        let resizer = new ResizeObserver(handleResize);
+        resizer.observe(navBar)
+
+    })
+
+    function handleResize(entries) {
+        navHeight = entries[0].contentRect.height;
+        console.log('navHeight', navHeight);
+        
+
+        return navHeight;
+    }
+
+    /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
+    var prevScrollpos = window.pageYOffset;
+    window.onscroll = function () {
+        var currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+            document
+                .getElementById("navbar")
+                .style
+                .top = "0";
+mainContent.style.marginTop = navHeight + "px";
+
+        } else {
+            document
+                .getElementById("navbar")
+                .style
+                .top = "-" + navHeight + "px";
+                mainContent.style.marginTop = 0;
+
+        }
+        prevScrollpos = currentScrollPos;
+    }
+</script>
+    
 
   </body>
 
