@@ -41,6 +41,7 @@
     const navBar = document.getElementById('navbar');
     const mainContent = document.getElementById("main-content");
 
+
     document.addEventListener('DOMContentLoaded', () => {
         let resizer = new ResizeObserver(handleResize);
         resizer.observe(navBar)
@@ -50,7 +51,6 @@
     function handleResize(entries) {
         navHeight = entries[0].contentRect.height;
         console.log('navHeight', navHeight);
-        {# console.log(mainContent) #}
 
         return navHeight;
     }
@@ -60,18 +60,15 @@
     window.onscroll = function () {
         var currentScrollPos = window.pageYOffset;
         if (prevScrollpos > currentScrollPos) {
-            document
-                .getElementById("navbar")
-                .style
-                .top = "0";
-mainContent.style.marginTop = navHeight + "px";
+            navBar.style.position = "fixed";
+            navBar.style.top = "0";
+            mainContent.style.marginTop = navHeight + "px";
 
         } else {
-            document
-                .getElementById("navbar")
-                .style
-                .top = "-" + navHeight + "px";
-                mainContent.style.marginTop = 0;
+            navBar.style.position = "relative";
+
+            navBar.style.top = "-" + navHeight + "px";
+            mainContent.style.marginTop = 0;
 
         }
         prevScrollpos = currentScrollPos;

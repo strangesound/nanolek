@@ -1,15 +1,20 @@
-{# {% set news = news %} #}
-
 <section class="news">
     <h2 class="section__head">Новости</h2>
     <div class="news__container">
         <div class="swiper newsSwiper">
             <div class="swiper-wrapper">
-                {% for new in news %}
+                {% for new in collections.news %}
                     <div class="swiper-slide news__card">
-                        <h3>{{new.newsTitle}}</h2>
-                        {# <p>{{new.newsBody}}</p> #}
-                        <p class="news__date">{{new.newsDate}}</p>
+                        <time class="news__date">{{new.data.date.toLocaleString( "ru-RU",{
+                            weekday: "short",
+                            year: "numeric",
+                            month: "2-digit",
+                            day: "numeric"
+                        })}}</time>
+                        <h3>{{new.data.title}}</h3>
+                        {# <p class="news__date">{{new.newsDate}}</p> #}
+                        <a href="{{new.url}}" class="slider-news__links"> Читать целиком  </a>
+
                     </div>
                 {% endfor %}
             </div>
@@ -32,9 +37,25 @@
 <script>
 
     var swiper = new Swiper(".newsSwiper", {
-        slidesPerView: 4,
-        spaceBetween: 100,
         grabCursor: true,
+
+        breakpoints: {
+            // when window width is >= 320px
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 10
+            },
+            768: {
+                slidesPerView: 3,
+                spaceBetween: 40
+            },
+
+            1199: {
+                slidesPerView: 4,
+                spaceBetween: 100
+            }
+        },
+
         navigation: {
             nextEl: "#news-next",
             prevEl: "#news-prev"

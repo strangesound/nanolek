@@ -86,8 +86,6 @@
     </div>
     
 </section>
-
-
 <section class="news">
     <h2 class="section__head">Новости</h2>
     <div class="news__container">
@@ -95,45 +93,51 @@
             <div class="swiper-wrapper">
                 
                     <div class="swiper-slide news__card">
-                        <h3>Выручка «Нанолек» в 2021 году составила 19,5 млрд рублей, показав рост +57%.</h2>
+                        <time class="news__date">ср, 13.04.2022 г.</time>
+                        <h3>«Нанолек» запустила телеграм-канал Фарма FM</h3>
                         
-                        <p class="news__date">13.04.22</p>
+                        <a href="/news/13-04-2022_new/" class="slider-news__links"> Читать целиком  </a>
+
                     </div>
                 
                     <div class="swiper-slide news__card">
-                        <h3>«Нанолек» запустила телеграм-канал Фарма FM</h2>
+                        <time class="news__date">ср, 13.04.2022 г.</time>
+                        <h3>Выручка «Нанолек» в 2021 году составила 19,5 млрд рублей, показав рост + 57%</h3>
                         
-                        <p class="news__date">22.03.22</p>
+                        <a href="/news/13-04-2022_new1/" class="slider-news__links"> Читать целиком  </a>
+
                     </div>
                 
                     <div class="swiper-slide news__card">
-                        <h3>«Наша Тесла»: биофармацевтическая компания «Нанолек» берет курс на полное импортозамещение</h2>
+                        <time class="news__date">ср, 13.04.2022 г.</time>
+                        <h3>«Нанолек» запустила телеграм-канал Фарма FM</h3>
                         
-                        <p class="news__date">23.03.22</p>
+                        <a href="/news/13-04-2022_newcopy/" class="slider-news__links"> Читать целиком  </a>
+
                     </div>
                 
                     <div class="swiper-slide news__card">
-                        <h3>«Нанолек» запустила телеграм-канал Фарма FM</h2>
+                        <time class="news__date">ср, 13.04.2022 г.</time>
+                        <h3>«Наша Тесла»: биофармацевтическая компания «Нанолек» берет курс на полное импортозамещение</h3>
                         
-                        <p class="news__date">22.03.22</p>
+                        <a href="/news/23-03-2022_new/" class="slider-news__links"> Читать целиком  </a>
+
                     </div>
                 
                     <div class="swiper-slide news__card">
-                        <h3>«Нанолек» запустила телеграм-канал Фарма FM</h2>
+                        <time class="news__date">пн, 23.05.2022 г.</time>
+                        <h3>Максим Стецюк — спикер российского фармацевтического форума имени Н.А. Семашко</h3>
                         
-                        <p class="news__date">22.03.22</p>
+                        <a href="/news/23-05-2022_new/" class="slider-news__links"> Читать целиком  </a>
+
                     </div>
                 
                     <div class="swiper-slide news__card">
-                        <h3>«Наша Тесла»: биофармацевтическая компания «Нанолек» берет курс на полное импортозамещение</h2>
+                        <time class="news__date">ср, 25.05.2022 г.</time>
+                        <h3>Видеоэкскурсия по заводу «Нанолек» с директором Денисом Дугиным</h3>
                         
-                        <p class="news__date">23.03.22</p>
-                    </div>
-                
-                    <div class="swiper-slide news__card">
-                        <h3>«Нанолек» запустила телеграм-канал Фарма FM</h2>
-                        
-                        <p class="news__date">22.03.22</p>
+                        <a href="/news/25-05-2022_new/" class="slider-news__links"> Читать целиком  </a>
+
                     </div>
                 
             </div>
@@ -156,9 +160,25 @@
 <script>
 
     var swiper = new Swiper(".newsSwiper", {
-        slidesPerView: 4,
-        spaceBetween: 100,
         grabCursor: true,
+
+        breakpoints: {
+            // when window width is >= 320px
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 10
+            },
+            768: {
+                slidesPerView: 3,
+                spaceBetween: 40
+            },
+
+            1199: {
+                slidesPerView: 4,
+                spaceBetween: 100
+            }
+        },
+
         navigation: {
             nextEl: "#news-next",
             prevEl: "#news-prev"
@@ -468,12 +488,31 @@
 
 <!-- Initialize Swiper -->
 <script>
+
     
 
     var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 3,
-        spaceBetween: 30,
         grabCursor: true,
+
+        breakpoints: {
+            // when window width is >= 320px
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 10
+            },
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 20
+            },
+
+            1199: {
+                slidesPerView: 3,
+                spaceBetween: 30
+            }
+        },
+
+
+
         navigation: {
             nextEl: "#swiper-spec-next",
             prevEl: "#swiper-spec-prev"
@@ -588,6 +627,7 @@
     const navBar = document.getElementById('navbar');
     const mainContent = document.getElementById("main-content");
 
+
     document.addEventListener('DOMContentLoaded', () => {
         let resizer = new ResizeObserver(handleResize);
         resizer.observe(navBar)
@@ -597,7 +637,6 @@
     function handleResize(entries) {
         navHeight = entries[0].contentRect.height;
         console.log('navHeight', navHeight);
-        
 
         return navHeight;
     }
@@ -607,18 +646,15 @@
     window.onscroll = function () {
         var currentScrollPos = window.pageYOffset;
         if (prevScrollpos > currentScrollPos) {
-            document
-                .getElementById("navbar")
-                .style
-                .top = "0";
-mainContent.style.marginTop = navHeight + "px";
+            navBar.style.position = "fixed";
+            navBar.style.top = "0";
+            mainContent.style.marginTop = navHeight + "px";
 
         } else {
-            document
-                .getElementById("navbar")
-                .style
-                .top = "-" + navHeight + "px";
-                mainContent.style.marginTop = 0;
+            navBar.style.position = "relative";
+
+            navBar.style.top = "-" + navHeight + "px";
+            mainContent.style.marginTop = 0;
 
         }
         prevScrollpos = currentScrollPos;

@@ -91,6 +91,20 @@
 
             </div><div class="new__container">
 
+                <time>ср, 13.04.2022 г.</time>
+                <h1>«Нанолек» запустила телеграм-канал Фарма FM</h1>
+                <p>Здесь будут самые существенные для фарминдустрии новости — в интерпретации команды «Нанолек» и ведущих экспертов отрасли.</p>
+                <a href="/news/13-04-2022_newcopy/" class="news__links"> Читать целиком  </a>
+
+            </div><div class="new__container">
+
+                <time>ср, 13.04.2022 г.</time>
+                <h1>«Наша Тесла»: биофармацевтическая компания «Нанолек» берет курс на полное импортозамещение</h1>
+                <p>Здесь будут самые существенные для фарминдустрии новости — в интерпретации команды «Нанолек» и ведущих экспертов отрасли.</p>
+                <a href="/news/23-03-2022_new/" class="news__links"> Читать целиком  </a>
+
+            </div><div class="new__container">
+
                 <time>пн, 23.05.2022 г.</time>
                 <h1>Максим Стецюк — спикер российского фармацевтического форума имени Н.А. Семашко</h1>
                 <p>«Нужно создавать оригинальные инновационные препараты, чтобы Россию перестали считать страной дженериков»</p>
@@ -177,6 +191,7 @@
     const navBar = document.getElementById('navbar');
     const mainContent = document.getElementById("main-content");
 
+
     document.addEventListener('DOMContentLoaded', () => {
         let resizer = new ResizeObserver(handleResize);
         resizer.observe(navBar)
@@ -186,7 +201,6 @@
     function handleResize(entries) {
         navHeight = entries[0].contentRect.height;
         console.log('navHeight', navHeight);
-        
 
         return navHeight;
     }
@@ -196,18 +210,15 @@
     window.onscroll = function () {
         var currentScrollPos = window.pageYOffset;
         if (prevScrollpos > currentScrollPos) {
-            document
-                .getElementById("navbar")
-                .style
-                .top = "0";
-mainContent.style.marginTop = navHeight + "px";
+            navBar.style.position = "fixed";
+            navBar.style.top = "0";
+            mainContent.style.marginTop = navHeight + "px";
 
         } else {
-            document
-                .getElementById("navbar")
-                .style
-                .top = "-" + navHeight + "px";
-                mainContent.style.marginTop = 0;
+            navBar.style.position = "relative";
+
+            navBar.style.top = "-" + navHeight + "px";
+            mainContent.style.marginTop = 0;
 
         }
         prevScrollpos = currentScrollPos;

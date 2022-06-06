@@ -77,9 +77,9 @@
 <section class="news-one-page">
 
     <div class="news-one-page__container">
-                <time>ср, 25.05.2022 г.</time>
+                <time class="">ср, 25.05.2022 г.</time>
             <h1>Видеоэкскурсия по заводу «Нанолек» с директором Денисом Дугиным</h1>
-            <p>Российская биофармацевтическая компания «Нанолек» специализируется на выпуске импортозамещающих и инновационных лекарственных препаратов, как собственной разработки, так и созданных с привлечением международных партнеров.</p>
+            <p class = "news-one-page__description">Российская биофармацевтическая компания «Нанолек» специализируется на выпуске импортозамещающих и инновационных лекарственных препаратов, как собственной разработки, так и созданных с привлечением международных партнеров.</p>
             <p>Завод компании в Кировской области, открытый в 2014 году, построен с прицелом на лучшие мировые практики и технологии. Производство не только имеет сертификат GMP, но и регулярно проходит аудиты качества крупных международных фармацевтических корпораций.</p>
 <p>Представители телеграм-канала &quot;Фарма ФМ&quot; прошли по заводу с директором БМК &quot;Нанолек&quot; Денисом Дугиным.</p>
 <p>Несколько интересных фактов:</p>
@@ -88,7 +88,9 @@
 <p>● Знаменитый футуристический коридор на заводе «Нанолек» умным образом соединяет все части завода. Именно отсюда через шлюзы попадают в «чистые» зоны.</p>
 <p><em>Самые интересные новости из мира фармы читайте в телеграм-канале «Фарма ФМ» по ссылке «Источник».</em></p>
 
+    <a href="/all-news" class="btn">Все новости</a>
     </div>
+
 </section>
     </main>
     <section class="footer">
@@ -162,6 +164,7 @@
     const navBar = document.getElementById('navbar');
     const mainContent = document.getElementById("main-content");
 
+
     document.addEventListener('DOMContentLoaded', () => {
         let resizer = new ResizeObserver(handleResize);
         resizer.observe(navBar)
@@ -171,7 +174,6 @@
     function handleResize(entries) {
         navHeight = entries[0].contentRect.height;
         console.log('navHeight', navHeight);
-        
 
         return navHeight;
     }
@@ -181,18 +183,15 @@
     window.onscroll = function () {
         var currentScrollPos = window.pageYOffset;
         if (prevScrollpos > currentScrollPos) {
-            document
-                .getElementById("navbar")
-                .style
-                .top = "0";
-mainContent.style.marginTop = navHeight + "px";
+            navBar.style.position = "fixed";
+            navBar.style.top = "0";
+            mainContent.style.marginTop = navHeight + "px";
 
         } else {
-            document
-                .getElementById("navbar")
-                .style
-                .top = "-" + navHeight + "px";
-                mainContent.style.marginTop = 0;
+            navBar.style.position = "relative";
+
+            navBar.style.top = "-" + navHeight + "px";
+            mainContent.style.marginTop = 0;
 
         }
         prevScrollpos = currentScrollPos;

@@ -77,9 +77,9 @@
 <section class="news-one-page">
 
     <div class="news-one-page__container">
-                <time>ср, 13.04.2022 г.</time>
+                <time class="">ср, 13.04.2022 г.</time>
             <h1>Выручка «Нанолек» в 2021 году составила 19,5 млрд рублей, показав рост + 57%</h1>
-            <p>В биофармацевтической компании «Нанолек» подвели финансовые итоги 2021 года: выручка составила 19,5 млрд рублей, + 57% по сравнению с 2020 годом. Однако главным драйвером резкого роста стал не ковид.</p>
+            <p class = "news-one-page__description">В биофармацевтической компании «Нанолек» подвели финансовые итоги 2021 года: выручка составила 19,5 млрд рублей, + 57% по сравнению с 2020 годом. Однако главным драйвером резкого роста стал не ковид.</p>
             <p>14.04.22, Москва --- В биофармацевтической компании «Нанолек» подвели финансовые итоги 2021 года: выручка составила 19,5 млрд рублей, + 57% по сравнению с 2020 годом. Однако главным драйвером резкого роста стал не ковид.</p>
 <p>Второй год подряд фармацевтическая компания «Нанолек» демонстрирует стремительный рост. В 2020 году выручка составила 12,4 млрд рублей (+ 70% по сравнению с 2019 годом). В 2021-м компания взяла новую высоту: произведено более 30 млн упаковок препаратов, годовая выручка достигла 19,5 млрд рублей --- + 57% по сравнению с 2020-м годом.</p>
 <p>Несмотря на то, что название компании в 2021 году часто звучало в связи с вакциной «КовиВак», которую в декабре начали производить на заводе «Нанолек» в Кировской области по заказу разработчика --- Центра им. Чумакова, главным драйвером роста компании стал не ковид. Свою лепту внес «Ковидолек», показав существенный рост продаж, но в целом препараты, связанные с лечением ковида, принесли &lt; 20% выручки.</p>
@@ -96,7 +96,9 @@
 <p><strong>Справка</strong></p>
 <p><strong>«Нанолек»:</strong> современная биофармацевтическая компания, основана в 2011 году Владимиром Христенко и Михаилом Некрасовым. Специализируется на выпуске импортозамещающих и инновационных лекарственных препаратов, как собственной разработки, так и созданных с привлечением международных партнеров. Один из лидеров по производству педиатрических вакцин в РФ. Кроме вакцин в портфель входят препараты для лечения ВИЧ, онкологических и орфанных заболеваний.</p>
 
+    <a href="/all-news" class="btn">Все новости</a>
     </div>
+
 </section>
     </main>
     <section class="footer">
@@ -170,6 +172,7 @@
     const navBar = document.getElementById('navbar');
     const mainContent = document.getElementById("main-content");
 
+
     document.addEventListener('DOMContentLoaded', () => {
         let resizer = new ResizeObserver(handleResize);
         resizer.observe(navBar)
@@ -179,7 +182,6 @@
     function handleResize(entries) {
         navHeight = entries[0].contentRect.height;
         console.log('navHeight', navHeight);
-        
 
         return navHeight;
     }
@@ -189,18 +191,15 @@
     window.onscroll = function () {
         var currentScrollPos = window.pageYOffset;
         if (prevScrollpos > currentScrollPos) {
-            document
-                .getElementById("navbar")
-                .style
-                .top = "0";
-mainContent.style.marginTop = navHeight + "px";
+            navBar.style.position = "fixed";
+            navBar.style.top = "0";
+            mainContent.style.marginTop = navHeight + "px";
 
         } else {
-            document
-                .getElementById("navbar")
-                .style
-                .top = "-" + navHeight + "px";
-                mainContent.style.marginTop = 0;
+            navBar.style.position = "relative";
+
+            navBar.style.top = "-" + navHeight + "px";
+            mainContent.style.marginTop = 0;
 
         }
         prevScrollpos = currentScrollPos;
