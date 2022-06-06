@@ -1,0 +1,25 @@
+---
+layout: layouts/base.njk
+title: Новости
+---
+<section class="news-page">
+
+    <div class="news__container">
+        {%- for new in collections.news -%}
+            <div class="new__container">
+
+                <time>{{new.data.date.toLocaleString( "ru-RU",{
+                            weekday: "short",
+                            year: "numeric",
+                            month: "2-digit",
+                            day: "numeric"
+                        })}}</time>
+                <h1>{{new.data.title}}</h1>
+                <p>{{new.data.description}}</p>
+                <a href="{{new.url}}" class="news__links"> Читать целиком  </a>
+
+            </div>
+
+        {%- endfor -%}
+    </div>
+</section>
