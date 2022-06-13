@@ -64,3 +64,7 @@
     transition: opacity .25s;
 
 }
+
+.nav-item[data-state="active"]{
+    font-weight: 500;
+}

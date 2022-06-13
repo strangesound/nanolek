@@ -1,0 +1,35 @@
+<section class="numbers">
+    <div class="numbers__container">
+        <div class="numbers__textAndBtn blue">
+            <h2 class="section__head">Компания</h2>
+            <h2 class="numbers__header">Нанолек обладает уникальным опытом в области трансфера технологий в рамках партнерства с ведущими мировыми фармацевтическими компаниями </h2>
+            {# <button class="btn">О компании</button> #}
+
+        </div>
+
+        {% for number in numbers %}
+            <div class="numbers__card">
+                <div class="numbers__alltxt-container">
+                    <div class="numbers__text-container">
+                        <p class="numbers__number" >{{number.number}}</p>
+                        <p class="numbers_mln">{{number.mln}}</p>
+                    </div>
+                    <p class="numbers__description">{{number.body}}</p>
+                </div>
+            </div>
+        {% endfor %}
+        {% for number in company_numbers %}
+            <div class="numbers__card">
+                <div class="numbers__alltxt-container">
+                        <p class="numbers__description" >{{number.more}}</p>
+                    <div class="numbers__text-container">
+                        <p class="numbers__number" >{{number.number}}</p>
+                        <p class="numbers_mln">{{number.mln}}</p>
+                    </div>
+                    <p class="numbers__description">{{number.body}}</p>
+                </div>
+            </div>
+        {% endfor %}
+
+    </div>
+</section>

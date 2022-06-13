@@ -22,9 +22,11 @@
     --LimeDark: #9BECB8;
     --Lime: #CFF1DE;
     --Cyan: #A4DDFA;
+    --Blue: #66B2E4;
     --Dark: #202D56;
     --Back: #F4F4F6;
     --Gray: #BFBFC2;
+    --lightGray: #DFDDE1;
     --colorLight: #fff;
     --gutter: min(max(8px, 0.595vw));
     --gutter_x2: min(max(16px, 1.190vw));
@@ -43,15 +45,22 @@ body {
     background-color: var(--Back);
 }
 
+#main-container{
+    /* max-width: 1920px;
+    margin: auto; */
+}
+
 a {
     color: inherit;
 }
 
+
+
 .btn {
     background-color: var(--Dark);
     color: white;
-    padding: 1.324vw 4.044vw;
-    border-radius: 106px;
+    padding: 1.190vw 2.083vw;
+    border-radius: 7.887vw;
     border: none;
     transition: all .3s;
     cursor: pointer;

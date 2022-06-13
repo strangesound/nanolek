@@ -1,5 +1,5 @@
 .news {
-    margin: 0 0.588vw;
+    margin: 0 var(--gutter);
     background-color: #fff;
     border-radius: 0px 0px 40px 40px;
     padding: 3.529vw 3.529vw 3.529vw 3.529vw;
@@ -7,9 +7,9 @@
 }
 
 .news__container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 9vw;
+    display: block;
+    /* grid-template-columns: repeat(4, 1fr);
+    gap: 9vw; */
 
 
 }
@@ -28,6 +28,8 @@
     font-size: 18px;
     line-height: 133%;
     min-height: 170px;
+    hyphens: auto;
+
 }
 
 .news__date {
@@ -81,4 +83,15 @@
 
 .left{
     transform: rotate(180deg);
+}
+
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.slider-news__links{
+    display: block;
+    font-size: 14px;
 }

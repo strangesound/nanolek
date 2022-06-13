@@ -22,9 +22,6 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
-
-
-
 }
 
 .numbers__card{
@@ -33,6 +30,8 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+    aspect-ratio: 1;
+
     /* padding: 7.353vw 3.235vw; */
     /* width: 23.529vw;
     height: 23.529vw; */
@@ -69,6 +68,7 @@
     font-size: min(max(12px, 1.5vw));
     line-height: 110%;
     margin-top: 8px;
+    max-width: 90%;
 }
 
 
@@ -101,7 +101,6 @@
     line-height: 105%;
     letter-spacing: -0.04em;
     /* width: 50%; */
-    margin-bottom: 13vw;
+    /* margin-bottom: 13vw; */
 
 }
-
